@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            //导出
+            $("#export").click(function () {
+                $("#form1").submit();
+            });
+            //导入
+            $("#import").click(function () {
+                $.post("@Url.Action("Import")", {}, function (data) {
+                    alert(data.success);
+                });
+            });
+        });
+    </script>
+}
+
+<h2>Aspose</h2>
+@using (Html.BeginForm("Export", "Aspose", FormMethod.Post, new { id = "form1" }))
+{
+    <input type="button" value="导出" id="export" />
+    <input type="button" value="导入" id="import" />
+}

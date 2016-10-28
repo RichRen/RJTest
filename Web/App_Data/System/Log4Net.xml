@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <!--定义日志的输出媒介-->
+  <root>
+    <!--从低到高共有7个级别：ALL,DEBUG,INFO,WARN,ERROR,FATAL,OFF-->
+    <level value="INFO" />
+    <appender-ref ref="RollingFileAppender" />
+  </root>
+
+  <!--使用Rolling方式记录日志，按照日来记录日志-->
+  <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+    <!--文件名,可以相对路径,也可以绝对路径,这里只给定了文件夹-->
+    <file value="Logs\\" />
+    <!--最小锁定模型以允许多个进程可以写入同一个文件,解决文件独占问题-->
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <!--是否增加文件-->
+    <appendToFile value="true" />
+    <!--日志追加类型,Date为按日期增加文件,Size为按大小-->
+    <rollingStyle value="Date" />
+    <!--文件命名格式,非日期参数化要进行转义,如自定义文件后缀-->
+    <datePattern value="yyyy-MM\\yyyy-MM-dd&quot;.txt&quot;" />
+    <!--是否固定文件名-->
+    <staticLogFileName value="false" />
+    <!--内容布局-->
+    <layout type="log4net.Layout.PatternLayout">
+      <!--头部-->
+      <header value="----------------------Header--------------------------&#13;&#10;"/>
+      <!--结尾-->
+      <footer value="----------------------Footer--------------------------&#13;&#10;"/>
+      <!--输出格式化-->
+      <conversionPattern value="%d [%thread] %level %logger %ndc - %message%newline" />
+    </layout>
+  </appender>
+</log4net>

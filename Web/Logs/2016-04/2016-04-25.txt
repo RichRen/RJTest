@@ -1,0 +1,21 @@
+----------------------Header--------------------------
+2016-04-25 11:35:46,662 [6] ERROR Web.MvcApplication (null) - 
+异常类型: System.Web.HttpException
+异常内容: 未找到路径“/”的控制器或该控制器未实现 IController。
+异常页面：http://localhost:31672/
+浏 览 器：Chrome45
+操作系统：Microsoft Windows NT 6.1.7601 Service Pack 1
+堆栈跟踪：
+   在 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   在 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   在 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+----------------------Footer--------------------------
+----------------------Header--------------------------
+----------------------Footer--------------------------

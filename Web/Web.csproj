@@ -64,8 +64,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -121,6 +121,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Html\navBar.html" />
+    <Content Include="Html\VueJs\component-02.html" />
+    <Content Include="Html\VueJs\component-03.html" />
+    <Content Include="Html\VueJs\blogs.html" />
+    <Content Include="Html\VueJs\forApi.html" />
+    <Content Include="Html\VueJs\filters.html" />
+    <Content Include="Html\VueJs\component-01.html" />
+    <Content Include="Html\VueJs\router.html" />
+    <Content Include="Html\VueJs\jqEvent.html" />
+    <Content Include="Html\VueJs\clickBanding.html" />
+    <Content Include="Html\VueJs\forIfElse.html" />
+    <Content Include="Html\VueJs\for.html" />
+    <Content Include="Html\VueJs\ifelse.html" />
+    <Content Include="Html\VueJs\HelloVue.html" />
+    <Content Include="Html\VueJs\modelBanding.html" />
     <Content Include="Image\622762d09a82581ea1ec9c77.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -128,14 +142,40 @@
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\vue-router-0.7.13.js" />
+    <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue-resource.js" />
+    <Content Include="Scripts\vue-router.js" />
+    <Content Include="Scripts\vue-1.0.25.js" />
+    <Content Include="Scripts\vue.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\Uploader.swf" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.css" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.custom.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.custom.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.fis.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.flashonly.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.flashonly.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.html5only.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.html5only.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.noimage.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.noimage.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.nolog.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.nolog.min.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.withoutimage.js" />
+    <Content Include="Scripts\webuploader-0.1.5\webuploader.withoutimage.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Code\LogHelper.cs" />
+    <Compile Include="Controllers\ActionResultTestController.cs" />
     <Compile Include="Controllers\AsposeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="Controllers\VueJsController.cs" />
+    <Compile Include="Controllers\WebUploaderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,6 +197,8 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Template\user.xls" />
     <Content Include="Views\UI\Index.cshtml" />
+    <Content Include="Views\WebUploader\Index.cshtml" />
+    <Content Include="Scripts\webuploader-0.1.5\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,7 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Views\ActionResultTest\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\VueJs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

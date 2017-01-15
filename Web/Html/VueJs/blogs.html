@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-2.1.4.js"></script>
+    <script src="../../Scripts/vue.js"></script>
+</head>
+<body>
+    <div class="row" id="divBlogs">
+        <div class="col-md-12">
+            <button v-on:click="getBlogs" class="btn btn-default">查 询</button>
+            <div-blog v-for="blog in blogs" v-bind:item="blog"></div-blog>
+
+            <div style="position:fixed; right:0px; bottom:10px; width:44px; height:40px; background-color:#F8F8F8; font-weight:100; cursor:pointer;" id="toTop" onclick="toTop()">
+                <img title="返 回" style="width:38px;height:38px;border:1px solid #ccc" src="http://121.42.208.152/images/top.png">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var blogApp = new Vue({
+            el: "#divBlogs",
+            data: {
+                blogs:[
+                    {
+                        "NickName": "林彦君",
+                        "Title": "老王讲设计模式（一）——策略模式",
+                        "Url": "http://www.cnblogs.com/wisekingokok/p/6277845.html",
+                        "Des": "策略模式属于对象的行为模式。其用意是针对一组算法，将每一个算法封装到具有共同接口的独立的类中，从而使得它们可以相互替换。策略模式使得算法可以在不影响到客户端的情况下发生变化。 ...",
+                        "HeadUrl": "http://pic.cnblogs.com/face/324523/20151213194515.png",
+                        "BlogUrl": "http://www.cnblogs.com/wisekingokok/",
+                        "ZanNum": 0,
+                        "ReadNum": 34,
+                        "CommiteNum": 0,
+                        "CreateTime": "2017-01-12T13:32:00",
+                        "Content": null
+                    }
+                    ]
+            },
+            methods: {
+                getBlogs: function () {
+
+                    var that = this;
+                    $.getJSON("http://www.lovexins.com:1001/api/values?task=2", function (result) {
+                        if (!result) { return; }
+                        that.blogs = result;
+                    });
+                }
+            },
+            components: {
+                "div-blog": {
+                    props: ["item"],
+                    template: '<div class=" bs-callout bs-callout-danger">' +
+                                   '    <h4>' +
+                                   '        <a v-bind:href="item.Url" target="_blank">{{item.Title | toUpperOrLower(false)}}</a>' +
+                                   '    </h4>' +
+                                   '    <p>' +
+                                   '        {{item.Des}}' +
+                                   '    </p>' +
+                                   '    <hr />' +
+                                   '    <h5>' +
+                                   '        作者：<a v-bind:href="item.BlogUrl" target="_blank">{{item.NickName}}</a>  发布时间：<code>{{item.CreateTime}}</code>  推荐：<code>{{item.ZanNum}}</code>  阅读：<code>{{item.ReadNum}}</code>  评论：<code>{{item.CommiteNum}}</code>' +
+                                   '    </h5>' +
+                                   ' </div>',
+                    filters: {
+                        toUpperOrLower: function (val, isUpper) {
+                            if (!val) { return ""; }
+
+                            return isUpper ? val.toUpperCase() : val.toLowerCase();
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

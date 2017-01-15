@@ -11,9 +11,6 @@ namespace Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            int i = 0;
-            int j = 10 / i;
-
             return View();
         }
     }

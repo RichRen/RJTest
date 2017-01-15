@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../../Scripts/vue.js"></script>
+</head>
+<body>
+    <div class="container" id="appVue">
+        <input type="text" v-model="msg" /><br />
+        {{msg|toUperOrLower(true)}}<br />
+        {{msg|toUperOrLower(false)}}
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#appVue",
+            data: {
+                msg: "vue"
+            },
+            methods: {
+                showMsg: function () {
+                    this.msg = "我是" + this.msg;
+                }
+            },
+            filters: {
+                toUperOrLower: function (val, isUpper) {
+                    if (!val) { return ""; }
+
+                    return isUpper ? val.toUpperCase() : val.toLowerCase()
+                }
+            }
+        });
+    </script>
+</body>
+</html>

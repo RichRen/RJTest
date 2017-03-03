@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="../../Scripts/vue.js"></script>
+    
+</head>
+<body>
+    <ul id="demo">
+        <li v-for="item in list">{{item}}</div>
+    </ul>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#demo',
+            data: {
+                list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            },
+            methods: {
+                push: function () {
+                    this.list.push(11);
+
+                    this.$nextTick(function () {
+                        alert('v-for渲染已经完成')
+                    })
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

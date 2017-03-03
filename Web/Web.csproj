@@ -127,6 +127,7 @@
     <Content Include="Html\VueJs\forApi.html" />
     <Content Include="Html\VueJs\filters.html" />
     <Content Include="Html\VueJs\component-01.html" />
+    <Content Include="Html\VueJs\vue-callback.html" />
     <Content Include="Html\VueJs\router.html" />
     <Content Include="Html\VueJs\jqEvent.html" />
     <Content Include="Html\VueJs\clickBanding.html" />

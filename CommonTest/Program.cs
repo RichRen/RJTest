@@ -10,8 +10,10 @@ namespace CommonTest
 {
     class Program
     {
+        static int[] arr = new int[] { 1, 2, 3, 4, 5 };
         static void Main(string[] args)
         {
+            
             Console.ReadLine();
         }
     }

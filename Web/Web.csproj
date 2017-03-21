@@ -121,8 +121,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Html\navBar.html" />
-    <Content Include="Html\VueJs\component-02.html" />
-    <Content Include="Html\VueJs\component-03.html" />
+    <Content Include="Html\VueJs\component-02-part.html" />
+    <Content Include="Html\VueJs\component-0301-template-props.html" />
+    <Content Include="Html\VueJs\component-03-template.html" />
     <Content Include="Html\VueJs\blogs.html" />
     <Content Include="Html\VueJs\Demo.html" />
     <Content Include="Html\VueJs\forApi.html" />

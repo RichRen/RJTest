@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <ul class="pagination">
+            <li v-for="n in pageCount">
+                <a href="javascripit:void(0)" v-bind:style="activeNumber === n ? 'background-color:green' : ''">{{ n }}</a>
+                <!--缩写语法-->
+                <!--<a href="javascripit:void(0)" :class="activeNumber=== n ? 'active' : ''">{{ n }}</a>-->
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                activeNumber: 2,
+                pageCount: 10
+            }
+        })
+</script>
+</html>

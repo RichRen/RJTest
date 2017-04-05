@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="../../Scripts/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos" v-if="todo.seen=='1'">
+                {{ todo.text }}
+            </li>
+            <!--注意下面写法的不同-->
+            <!--<li v-for="todo in todos" v-if="todo.seen">
+                <p v-if="todo.seen">{{ todo.text }}</p>
+            </li>-->
+        </ol>
+    </div>
+
+
+    <script type="text/javascript">
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos: [
+                  { text: 'Learn JavaScript',seen:'1' },
+                  { text: 'Learn Vue', seen: '1' },
+                  { text: 'Build something awesome', seen: '2' }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script src="../../Scripts/vue.js"></script>
+
+</head>
+<body>
+    <div id="app-4">
+        <input type="text" placeholder="名字" v-model="searchQuery" />  
+        <p v-for="user in filteredUsers">{{ user.name }}</p>
+    </div>
+
+
+    <script type="text/javascript">
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                users: [
+                  { name: 'jack',age:1 },
+                  { name: 'bbb', age: 11 },
+                  { name: 'ccc', age: 21 }
+                ],
+                searchQuery:''
+            },
+            computed: {
+                filteredUsers: function () {
+                    var self = this
+                    return self.users.filter(function (user) {
+                        return user.name.indexOf(self.searchQuery) !== -1
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -125,10 +125,13 @@
     <Content Include="Html\VueJs\component-0301-template-props.html" />
     <Content Include="Html\VueJs\component-03-template.html" />
     <Content Include="Html\VueJs\blogs.html" />
+    <Content Include="Html\VueJs\filters_search_for2.html" />
+    <Content Include="Html\VueJs\filters_search.html" />
     <Content Include="Html\VueJs\Demo.html" />
     <Content Include="Html\VueJs\forApi.html" />
     <Content Include="Html\VueJs\filters.html" />
     <Content Include="Html\VueJs\component-01.html" />
+    <Content Include="Html\VueJs\forIfElse2.html" />
     <Content Include="Html\VueJs\js\vue.js" />
     <Content Include="Html\VueJs\styles\demo.css" />
     <Content Include="Html\VueJs\v-bind.html" />
